@@ -200,28 +200,51 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
 }
 
-// Form Submission (for demonstration purposes)
+// Form Submission with EmailJS
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
+        // Show loading state
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+        
         // Get form data
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
+        const templateParams = {
+            to_name: "Jaymar",
+            from_name: document.getElementById('name').value,
+            reply_to: document.getElementById('email').value,
             subject: document.getElementById('subject').value,
             message: document.getElementById('message').value
         };
         
-        // Here you would typically send the data to a server
-        // For demonstration, we'll just log it and show a success message
-        console.log('Form Data:', formData);
-        
-        // Show success message (in a real app, you'd do this after successful submission)
-        alert('Message sent successfully!');
-        
-        // Reset form
-        contactForm.reset();
+        // Send email using EmailJS with updated API
+        emailjs.send("service_4lbexs9", "template_fympzrk", templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                
+                // Show success message
+                alert('Message sent successfully! I will get back to you soon.');
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Reset button
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            })
+            .catch(function(error) {
+                console.error('FAILED...', error);
+                
+                // Show detailed error message
+                alert('Error sending message: ' + JSON.stringify(error));
+                
+                // Reset button
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            });
     });
 }
 

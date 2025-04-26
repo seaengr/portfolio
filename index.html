@@ -9,14 +9,14 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Jaymar Abasolo</div>
+                <div class="logo">My Portfolio</div>
                 <div class="menu-btn">
                     <div class="menu-btn__burger"></div>
                 </div>
@@ -51,27 +51,29 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="slideshow-container">
-                    <div class="slide fade">
-                        <img src="./img/1.jpg" alt="Electrical Project">
+                <div class="slideshow-wrapper">
+                    <div class="slideshow-container">
+                        <div class="slide fade">
+                            <img src="./img/1.jpg" alt="Electrical Project">
+                        </div>
+                        <div class="slide fade">
+                            <img src="./img/2.jpg" alt="CCTV Installation">
+                        </div>
+                        <div class="slide fade">
+                            <img src="./img/3.jpg" alt="Solar PV System">
+                        </div>
+                        <div class="slide fade">
+                            <img src="./img/4.jpg" alt="Building Wiring">
+                        </div>
+                        <div class="slide fade">
+                            <img src="./img/5.jpg" alt="Networking Project">
+                        </div>
+                        <div class="slide fade">
+                            <img src="./img/6.jpg" alt="Maintenance Work">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     </div>
-                    <div class="slide fade">
-                        <img src="./img/2.jpg" alt="CCTV Installation">
-                    </div>
-                    <div class="slide fade">
-                        <img src="./img/3.jpg" alt="Solar PV System">
-                    </div>
-                    <div class="slide fade">
-                        <img src="./img/4.jpg" alt="Building Wiring">
-                    </div>
-                    <div class="slide fade">
-                        <img src="./img/5.jpg" alt="Networking Project">
-                    </div>
-                    <div class="slide fade">
-                        <img src="./img/6.jpg" alt="Maintenance Work">
-                    </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
                 <div class="dots-container">
                     <span class="dot" onclick="currentSlide(1)"></span>
@@ -94,7 +96,7 @@
             <div class="about-content">
                 <div class="about-image">
                     <!-- Profile image -->
-                    <img src="./img/jaymar.jpg" alt="Jaymar L. Abasolo">
+                    <img src="./img/cartoon.png" alt="Jaymar L. Abasolo">
                 </div>
                 <div class="about-text">
                     <h3>Who am I?</h3>
@@ -116,6 +118,9 @@
                     <h3>Technical Skills</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
+                            <div class="skill-image">
+                                <img src="./img/skill/electrical planing.jpg" alt="Electrical Planning">
+                            </div>
                             <div class="skill-icon"><i class="fas fa-bolt"></i></div>
                             <h4>Electrical Planning</h4>
                             <div class="skill-progress">
@@ -124,6 +129,9 @@
                             <span class="skill-percent">90%</span>
                         </div>
                         <div class="skill-item">
+                            <div class="skill-image">
+                                <img src="./img/skill/building wiring.jpg" alt="Building Wiring">
+                            </div>
                             <div class="skill-icon"><i class="fas fa-home"></i></div>
                             <h4>Building Wiring (EIM)</h4>
                             <div class="skill-progress">
@@ -132,6 +140,9 @@
                             <span class="skill-percent">85%</span>
                         </div>
                         <div class="skill-item">
+                            <div class="skill-image">
+                                <img src="./img/skill/cctv installation.jpg" alt="CCTV Installation">
+                            </div>
                             <div class="skill-icon"><i class="fas fa-video"></i></div>
                             <h4>CCTV Installation</h4>
                             <div class="skill-progress">
@@ -145,6 +156,9 @@
                     <h3>Computer Skills</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
+                            <div class="skill-image">
+                                <img src="./img/skill/p2p networking.jpg" alt="P2P Networking">
+                            </div>
                             <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
                             <h4>P2P Networking</h4>
                             <div class="skill-progress">
@@ -153,6 +167,9 @@
                             <span class="skill-percent">85%</span>
                         </div>
                         <div class="skill-item">
+                            <div class="skill-image">
+                                <img src="./img/skill/computer maintenance.jpg" alt="Computer Maintenance">
+                            </div>
                             <div class="skill-icon"><i class="fas fa-desktop"></i></div>
                             <h4>Computer Maintenance</h4>
                             <div class="skill-progress">
@@ -161,6 +178,9 @@
                             <span class="skill-percent">90%</span>
                         </div>
                         <div class="skill-item">
+                            <div class="skill-image">
+                                <img src="./img/skill/microsoft application.jpg" alt="Microsoft Applications">
+                            </div>
                             <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
                             <h4>Microsoft Applications</h4>
                             <div class="skill-progress">
@@ -174,6 +194,9 @@
                     <h3>Other Skills</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
+                            <div class="skill-image">
+                                <img src="./img/skill/autocad.jpg" alt="AutoCAD, SketchUP">
+                            </div>
                             <div class="skill-icon"><i class="fas fa-drafting-compass"></i></div>
                             <h4>AutoCAD, SketchUP</h4>
                             <div class="skill-progress">
@@ -182,6 +205,9 @@
                             <span class="skill-percent">80%</span>
                         </div>
                         <div class="skill-item">
+                            <div class="skill-image">
+                                <img src="./img/skill/pv solar system.jpg" alt="PV Solar Systems">
+                            </div>
                             <div class="skill-icon"><i class="fas fa-solar-panel"></i></div>
                             <h4>PV Solar Systems</h4>
                             <div class="skill-progress">
@@ -190,6 +216,9 @@
                             <span class="skill-percent">75%</span>
                         </div>
                         <div class="skill-item">
+                            <div class="skill-image">
+                                <img src="./img/skill/safety officer.jpg" alt="Safety Officer II">
+                            </div>
                             <div class="skill-icon"><i class="fas fa-hard-hat"></i></div>
                             <h4>Safety Officer II</h4>
                             <div class="skill-progress">
@@ -385,7 +414,7 @@
                         </div>
                         <div class="contact-text">
                             <h3>Location</h3>
-                            <p>Prk Sta Teresita, Tubod, Iligan City</p>
+                            <p>Iligan City</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -504,7 +533,15 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!-- JavaScript -->
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init("ozWc0FQZMV5h0wWaE");
+        })();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
